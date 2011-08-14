@@ -95,6 +95,14 @@ select+i
   +button-shadow(darken($back-color, 10%), $back-color, $highlight-color)
   padding: 1px 12px 2px
 
+.button:hover,
+button:hover,
+[type="submit"]:hover,
+[type="checkbox"]:hover+i,
+[type="radio"]:hover+i,
+select:hover+i
+  +button-shadow(darken($back-color, 2%), darken($back-color, 3%), darken($back-color, 4%), true)
+
 .button:active,
 button:active,
 [type="submit"]:active,
