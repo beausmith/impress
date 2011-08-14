@@ -1,3 +1,7 @@
+@import "compass"
+@import "compass/css3/gradient"
+@import "compass/css3/appearance"
+
 $text-back-color: #fff
 $back-color: $text-back-color
 
@@ -20,10 +24,10 @@ $focus-border-med: desaturate(darken($focus, $alpha-med * 100), 30%)
 $focus-border-dark: desaturate(darken($focus, $alpha-dark * 100), 30%)
 
 =button-shadow($shade-color, $back-color, $light-color, $split-light: false)
+  $drop-shadow: 0 1px rgba(#000, $lum * .1)
   $light-shadow: inset 0 0 0 1px $light-color
   @if $split-light
     $light-shadow: inset 0 1px $light-color, inset 0 -1px lighten($shade-color, 5%)
-  $drop-shadow: 0 1px rgba(#000, $lum * .1)
   // The offsets are tied to the font size so that they can be modified for
   // the different heights of different elements
   $inner-shadow: inset 0 -1.7em 1em -1em $shade-color
@@ -31,7 +35,7 @@ $focus-border-dark: desaturate(darken($focus, $alpha-dark * 100), 30%)
   // desktop browsers, could simply use a big offset value with no spread.
   // The 1px blur is required to make the Android Browser render the shadow.
   $background-shadow: inset 0 200px 1px -100px $back-color
-  box-shadow: $light-shadow, $drop-shadow, $inner-shadow, $background-shadow
+  +box-shadow($light-shadow, $drop-shadow, $inner-shadow, $background-shadow)
 
 ::-moz-focus-inner
   border: 0
@@ -40,7 +44,7 @@ input,
 textarea,
 button,
 select
-  -webkit-appearance: none
+  +appearance(none)
   background: transparent
   color: #000
   font: 13px/normal "Lucida Grande", Tahoma, sans-serif // abstract into type.sass
@@ -53,8 +57,8 @@ button,
 [type="checkbox"]+i,
 [type="radio"]+i,
 select+i
-  border-radius: 3px
-  box-sizing: border-box
+  +border-radius(3px)
+  +box-sizing(border-box)
   padding: 1px 4px 2px
 
 input,
@@ -65,12 +69,12 @@ textarea
   // in the corners when using transparent border colors.
   border: 1px solid
   border-color: $border-medium-color $border-light-color $border-light-color
-  box-shadow: inset 0 1px darken($text-back-color, 5%), 0 1px rgba(#fff, .3), inset 0 200px 1px -100px $text-back-color
+  +box-shadow(inset 0 1px darken($text-back-color, 5%), 0 1px rgba(#fff, .3), inset 0 200px 1px -100px $text-back-color)
 
 textarea
   padding-right: 2px
   overflow: auto
-  box-shadow: inset 0 1px darken($text-back-color, 5%), 0 1px rgba(#fff, .3), inset 0 800px 1px -400px $text-back-color
+  +box-shadow(inset 0 1px darken($text-back-color, 5%), 0 1px rgba(#fff, .3), inset 0 800px 1px -400px $text-back-color)
 
 button,
 [type="submit"],
@@ -78,13 +82,8 @@ button,
 [type="radio"]+i,
 select+i
   background: $border-medium-color
-  background: -webkit-gradient(linear,0 0,0 100%,from($border-light-color),to($border-dark-color))
-  background: -moz-linear-gradient($border-light-color, $border-dark-color)
-  background: -ms-linear-gradient($border-light-color, $border-dark-color)
-  background: -o-linear-gradient($border-light-color, $border-dark-color)
-  background: linear-gradient($border-light-color, $border-dark-color)
-  -moz-background-origin: border
-  background-origin: border-box
+  +background(linear-gradient($border-light-color, $border-dark-color))
+  +background-origin(border-box)
   border: 1px solid transparent
   +button-shadow(darken($back-color, 10%), $back-color, $highlight-color)
   padding: 1px 12px 2px
@@ -135,8 +134,7 @@ select:focus:active+i
   width: 12px
 
 [type="radio"]+i
-  -moz-border-radius: 12px
-  border-radius: 12px
+  +border-radius(12px)
   font-size: 8px
   margin: 0
   vertical-align: -2px
@@ -166,9 +164,8 @@ select:focus:active+i
 [type="radio"]
   &+i:after
     background: #000
-    -moz-border-radius: 4px
-    border-radius: 4px
-    box-shadow: 0 1px $highlight-color
+    +border-radius(4px)
+    +box-shadow(0 1px $highlight-color)
     top: 4px
     left: 4px
     height: 4px
