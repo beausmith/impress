@@ -4,6 +4,20 @@
 
   See [the demo](http://nateps.github.com/impress) of an HTML form styled with Impress.
 
+## Compiling
+
+Both [Stylus](http://learnboost.github.com/stylus/) and [Compass](http://compass-style.org/) will compile the CSS file to `public/form.css`.
+
+### Stylus
+
+1. [Install Stylus](https://github.com/learnboost/stylus/#readme) if necessary.
+2. ???
+
+### Compass
+
+1. [Install Compass](http://compass-style.org/install/) if necessary.
+2. Run `$ compass watch` from the Impress directory.
+
 ### Author
 
   [Nate Smith (nateps)](http://github.com/nateps)
