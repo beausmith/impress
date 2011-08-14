@@ -7,30 +7,72 @@
 <!--[if gte IE 9]><!--><link rel=stylesheet href=form.css><!--<![endif]-->
 
 <style>
-  form { padding: 24px }
+  h2 { font-weight: bold; font-size: 20px; margin: 0 0 10px }
+  section { padding: 12px 24px }
   form > p { margin-top: 8px }
 </style>
 
 <body>
-<form>
-  <p><input value="Some text"> <input type=submit value="Add"> Plain text
-  <p><label><input type=checkbox checked><i></i> Include option</label>
-  <p><label><input type=checkbox><i></i> Include option</label>
-  <p><label><input name=group0 type=radio><i></i> Include option</label>
-  <p><label><input name=group0 type=radio checked><i></i> Include option</label>
-  <p><label><input name=group0 type=radio><i></i> Include option</label>
-  <p><i class=select><i><select><option>First item<option>Second item<option>Third item</select><i></i></i></i> Some text <input value=Stuff></p>
-  <p><i class=select><i><select><option>First item<option>Second item<option>Third item</select><i></i></i></i> Some text
-  <p><textarea>Text in a box!</textarea></p>
-</form>
-<form style=background:#ccc>
-  <input> <input type=submit>
-</form>
-<form style=background:#999>
-  <input> <input type=submit>
-</form>
-<form style=background:#000>
-  <input> <input type=submit>
-</form>
+  <section>
+    <h2>Form Elements</h2>
+    <form>
+      <p><input value="Some text"> <input type=submit value="Add"> Plain text
+      <p><label><input type=checkbox checked><i></i> Include option</label>
+      <p><label><input type=checkbox><i></i> Include option</label>
+      <p><label><input type=checkbox checked><i></i> Include option</label> <label><input type=checkbox><i></i> Include option</label>
+      <p><label><input name=group0 type=radio><i></i> Include option</label>
+      <p><label><input name=group0 type=radio checked><i></i> Include option</label>
+      <p><label><input name=group0 type=radio><i></i> Include option</label>
+      <p>
+        <label><input name=group1 type=radio><i></i> Include option</label>
+        <label><input name=group1 type=radio checked><i></i> Include option</label>
+        <label><input name=group1 type=radio><i></i> Include option</label>
+      <p><i class=select><i><select><option>First item<option>Second item<option>Third item</select><i></i></i></i> Some text <input value=Stuff>  <input type=submit value="Add">
+      <p>
+        <i class=select><i><select><option>Month<option>First item<option>Second item<option>Third item</select><i></i></i></i>
+        <i class=select><i><select><option>Day<option>First item<option>Second item<option>Third item</select><i></i></i></i>
+        <i class=select><i><select><option>Year<option>First item<option>Second item<option>Third item</select><i></i></i></i>
+      <p><textarea>Text in a box!</textarea></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Label Types</h2>
+    <form>
+      <p><span class="field top-label"><label for=top-label>Left Label</label> <input id=top-label></span>
+      <p><span class="field left-label"><label for=left-label>Left Label</label> <input id=left-label></span>
+      <p><span class="field fade-label"><label for=fade-label>Fade Label</label> <input id=fade-label></span>
+    </form>
+  </section>
+
+  <section>
+    <h2>Buttons</h2>
+    <p>
+      <button type="button">Button</button>
+      <button type="button" class="hover">Button:hover</button>
+      <button type="button" class="active">Button:active</button>
+      <button type="button" disabled="disabled">Button:disabled</button>
+    </p>
+  </section>
+
+  <section>
+    <h2>Link Buttons</h2>
+    <p>
+      <a href="#link" class="button">Link</a>
+      <a href="#link" class="button hover">Link:hover</a>
+      <a href="#link" class="button active">Link:active</a>
+      <a href="#link" class="button disabled">Link:disabled</a>
+    </p>
+  </section>
+
+  <section style=background:#ccc>
+    <input> <input type=submit>
+  </section>
+  <section style=background:#999>
+    <input> <input type=submit>
+  </section>
+  <section style=background:#000>
+    <input> <input type=submit>
+  </section>
 
 <script src=vogue.js></script>
