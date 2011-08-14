@@ -40,6 +40,7 @@ $focus-border-dark: desaturate(darken($focus, $alpha-dark * 100), 30%)
 ::-moz-focus-inner
   border: 0
 
+.button,
 input,
 textarea,
 button,
@@ -51,6 +52,7 @@ select
   margin: 0
   outline: 0
 
+.button,
 input,
 textarea,
 button,
@@ -80,6 +82,7 @@ textarea
   overflow: auto
   +box-shadow($top-shadow, $drop-shadow, $textarea-gradient-shadow)
 
+.button,
 button,
 [type="submit"],
 [type="checkbox"]+i,
@@ -92,6 +95,7 @@ select+i
   +button-shadow(darken($back-color, 10%), $back-color, $highlight-color)
   padding: 1px 12px 2px
 
+.button:active,
 button:active,
 [type="submit"]:active,
 [type="checkbox"]:active+i,
@@ -104,6 +108,7 @@ textarea
   &:focus
     border-color: $focus-border-med $focus-border-light $focus-border-light
 
+.button:focus,
 button:focus,
 [type="submit"]:focus,
 [type="checkbox"]:focus+i,
@@ -112,6 +117,7 @@ select:focus+i
   border-color: $focus-border-light $focus-border-med $focus-border-dark
   +button-shadow($focus, $focus-light, $focus-highlight)
 
+.button:focus:active,
 button:focus:active,
 [type="submit"]:focus:active,
 [type="checkbox"]:focus:active+i,
