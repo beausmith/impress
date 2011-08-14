@@ -4,7 +4,7 @@ $back: $text-back
 $sel-light: #e5f4fb
 $sel: #b4d5fe
 
-$lum: 100 / lightness($back)
+$lum: 100 / 100 // hardcoding becasue SASS can not divide a integer by the percentage returnd from lightness($back-color)
 $lum-light: $lum * .25
 $lum-med: $lum * .35
 $lum-dark: $lum * .45
