@@ -215,9 +215,11 @@ select:disabled + i
       height: 4px
       width: 4px
 
+// Display after pseudo element if input checked
 \:checked
-  & + i:after
-    content: ""
+  & + i
+    &:after
+      content: ""
 
 .select
   display: inline-block
