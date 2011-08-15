@@ -225,7 +225,7 @@ select:disabled + i
   position: relative
   height: 21px
   min-width: 100px
-  & > i
+  & > span
     // The double wrapping is required, because overflow: hidden messes up the
     // baseline of inline-blocks in Firefox
     display: inline-block
@@ -249,7 +249,7 @@ select
     width: 100%
 
 // Rules for Opera
-\:-o-prefocus, .select > i
+\:-o-prefocus, .select > span
   // Fix bug in Opera 10
   float: left
 \:-o-prefocus, select

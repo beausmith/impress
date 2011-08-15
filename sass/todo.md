@@ -16,10 +16,10 @@
 * add :disabled state
 * line-height should allow buttons on line w/o effecting line-height
 * space out child (x > y) and sibling (x + y) for readability in SASS
+* change i to span when element contains content such that the semantic meaning of <i> doesn't alter meaning of the content.
 
 ---
 # TODO
-* change i to span when it has content such that the semantic meaning of the content is not altered
 * ability to use 16px/24px with 34px tall inputs
 * abstract font properties into variables
 * separate sizing into classes
