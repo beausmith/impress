@@ -22,6 +22,7 @@
 # TODO
 * ability to use 16px/24px with 34px tall inputs
 * abstract font properties into variables
+* checkboxes and radio buttons resize relative to the text size
 * separate sizing into classes
   * .small-button
   * .medium-button
