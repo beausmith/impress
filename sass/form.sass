@@ -97,6 +97,7 @@ select+i
   +button-shadow(darken($back-color, 10%), $back-color, $highlight-color)
   padding: 1px 12px 2px
 
+.button-hover,
 .button:hover,
 button:hover,
 [type="submit"]:hover,
@@ -107,6 +108,7 @@ button:hover,
 select:hover+i
   +button-shadow(darken($back-color, 2%), darken($back-color, 3%), darken($back-color, 4%), true)
 
+.button-active,
 .button:active,
 button:active,
 [type="submit"]:active,
@@ -122,6 +124,7 @@ textarea
   &:focus
     border-color: $focus-border-med $focus-border-light $focus-border-light
 
+.button-focus,
 .button:focus,
 button:focus,
 [type="submit"]:focus,
@@ -133,14 +136,34 @@ select:focus+i
   border-color: $focus-border-light $focus-border-med $focus-border-dark
   +button-shadow($focus, $focus-light, $focus-highlight)
 
+.button-focus-active,
 .button:focus:active,
 button:focus:active,
 [type="submit"]:focus:active,
+[type="reset"]:focus:active,
+[type="button"]:focus:active,
 [type="checkbox"]:focus:active+i,
 [type="radio"]:focus:active+i,
 select:focus:active+i
   $focus-active-back: desaturate(darken($focus-light, 25%), 30%) / 2 + $focus / 2
   +button-shadow($focus, $focus-active-back, darken($focus-active-back, 7%), true)
+
+// Some JS required to fully disable links.
+.button-disabled,
+.button.disabled,
+button:disabled,
+[type="submit"]:disabled,
+[type="reset"]:disabled,
+[type="button"]:disabled,
+[type="checkbox"]:disabled + i,
+[type="radio"]:disabled + i,
+select:disabled + i
+  border: 1px solid transparent
+  +button-shadow(lighten($back-color, 2%), lighten($back-color, 3%), lighten($back-color, 4%), false)
+
+.button-disabled,
+.button.disabled
+  cursor: default
 
 [type="checkbox"],
 [type="radio"]

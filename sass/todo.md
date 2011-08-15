@@ -13,10 +13,10 @@
 * abstract radio/checkbox styling
 * add .button element
 * add :hover state to form elements
+* add :disabled state
 
 ---
 # TODO
-* add :disabled state
 * line-height should allow buttons on line w/o effecting line-height
 * change i to span when it has content such that the semantic meaning of the content is not altered
 * space out child (x > y) and sibling (x + y)
