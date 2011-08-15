@@ -15,11 +15,11 @@
 * add :hover state to form elements
 * add :disabled state
 * line-height should allow buttons on line w/o effecting line-height
+* space out child (x > y) and sibling (x + y) for readability in SASS
 
 ---
 # TODO
 * change i to span when it has content such that the semantic meaning of the content is not altered
-* space out child (x > y) and sibling (x + y)
 * ability to use 16px/24px with 34px tall inputs
 * abstract font properties into variables
 * separate sizing into classes

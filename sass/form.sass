@@ -57,9 +57,9 @@ select
 input,
 textarea,
 button,
-[type="checkbox"]+i,
-[type="radio"]+i,
-select+i
+[type="checkbox"] + i,
+[type="radio"] + i,
+select + i
   +border-radius(3px)
   +box-sizing(border-box)
   padding: 1px 4px 2px
@@ -88,9 +88,9 @@ button,
 [type="submit"],
 [type="reset"],
 [type="button"],
-[type="checkbox"]+i,
-[type="radio"]+i,
-select+i
+[type="checkbox"] + i,
+[type="radio"] + i,
+select + i
   background: $border-medium-color
   +background(linear-gradient($border-light-color, $border-dark-color))
   +background-origin(border-box)
@@ -104,9 +104,9 @@ button:hover,
 [type="submit"]:hover,
 [type="reset"]:hover,
 [type="button"]:hover,
-[type="checkbox"]:hover+i,
-[type="radio"]:hover+i,
-select:hover+i
+[type="checkbox"]:hover + i,
+[type="radio"]:hover + i,
+select:hover + i
   +button-shadow(darken($back-color, 2%), darken($back-color, 3%), darken($back-color, 4%), true)
 
 .button-active,
@@ -115,9 +115,9 @@ button:active,
 [type="submit"]:active,
 [type="reset"]:active,
 [type="button"]:active,
-[type="checkbox"]:active+i,
-[type="radio"]:active+i,
-select:active+i
+[type="checkbox"]:active + i,
+[type="radio"]:active + i,
+select:active + i
   +button-shadow(darken($back-color, 10%), darken($back-color, 12%), darken($back-color, 16%), true)
 
 input,
@@ -131,9 +131,9 @@ button:focus,
 [type="submit"]:focus,
 [type="reset"]:focus,
 [type="button"]:focus,
-[type="checkbox"]:focus+i,
-[type="radio"]:focus+i,
-select:focus+i
+[type="checkbox"]:focus + i,
+[type="radio"]:focus + i,
+select:focus + i
   border-color: $focus-border-light $focus-border-med $focus-border-dark
   +button-shadow($focus, $focus-light, $focus-highlight)
 
@@ -143,9 +143,9 @@ button:focus:active,
 [type="submit"]:focus:active,
 [type="reset"]:focus:active,
 [type="button"]:focus:active,
-[type="checkbox"]:focus:active+i,
-[type="radio"]:focus:active+i,
-select:focus:active+i
+[type="checkbox"]:focus:active + i,
+[type="radio"]:focus:active + i,
+select:focus:active + i
   $focus-active-back: desaturate(darken($focus-light, 25%), 30%) / 2 + $focus / 2
   +button-shadow($focus, $focus-active-back, darken($focus-active-back, 7%), true)
 
@@ -170,7 +170,7 @@ select:disabled + i
 [type="radio"]
   opacity: 0
   position: absolute
-  &+i
+  & + i
     display: inline-block
     font-size: 7px
     margin-right: 2px
@@ -193,12 +193,12 @@ select:disabled + i
   // This uses an svg file for the check on an iOS retina screen. Unfortunately,
   // the Android browser can't render SVGs. A cleaner check for SVG support would
   // be better here.
-  [type="checkbox"]+i:after
+  [type="checkbox"] + i:after
     background: inline-image("check.svg", image/svg+xml) no-repeat
     height: 12px
 
 [type="radio"]
-  &+i
+  & + i
     +border-radius(12px)
     font-size: 8px
     margin: 0
@@ -216,7 +216,7 @@ select:disabled + i
       width: 4px
 
 \:checked
-  &+i:after
+  & + i:after
     content: ""
 
 .select
@@ -225,7 +225,7 @@ select:disabled + i
   position: relative
   height: 21px
   min-width: 100px
-  &>i
+  & > i
     // The double wrapping is required, because overflow: hidden messes up the
     // baseline of inline-blocks in Firefox
     display: inline-block
@@ -249,7 +249,7 @@ select
     width: 100%
 
 // Rules for Opera
-\:-o-prefocus, .select>i
+\:-o-prefocus, .select > i
   // Fix bug in Opera 10
   float: left
 \:-o-prefocus, select
@@ -261,7 +261,7 @@ select
 \:-o-prefocus, select:focus
   background: transparent
 
-select+i
+select + i
   position: absolute
   top: 0
   left: 0
@@ -270,7 +270,7 @@ select+i
 
 // Draws a downward-pointing triangle
 select
-  &+i:after
+  & + i:after
     border: solid
     border-color: darken(#fff, $lum * 60) transparent
     border-width: 4px 4px 0
@@ -279,5 +279,5 @@ select
     position: absolute
     bottom: 7px
     right: 5px
-  &:focus+i:after
+  &:focus + i:after
     border-top-color: #000
