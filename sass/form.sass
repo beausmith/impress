@@ -86,8 +86,6 @@ textarea
 .button,
 button,
 [type="submit"],
-[type="reset"],
-[type="button"],
 [type="checkbox"] + i,
 [type="radio"] + i,
 select + i
@@ -102,9 +100,7 @@ select + i
   // Should be webkit only
   button,
   input,
-  [type="submit"],
-  [type="reset"],
-  [type="button"]
+  [type="submit"]
     padding-top: 4px
     padding-bottom: 4px
   .button
@@ -115,14 +111,11 @@ select + i
 \:-o-prefocus,
 .button,
 input,
-[type="submit"],
-[type="reset"]
+[type="submit"]
   // Fix bug in Opera 10
   padding-bottom: 7px
-
-// Rules for Opera
 \:-o-prefocus,
-button[type="button"]
+button
   // Fix bug in Opera 10
   padding-top: 4px
   padding-bottom: 4px
@@ -131,8 +124,6 @@ button[type="button"]
 .button:hover,
 button:hover,
 [type="submit"]:hover,
-[type="reset"]:hover,
-[type="button"]:hover,
 [type="checkbox"]:hover + i,
 [type="radio"]:hover + i,
 select:hover + i
@@ -142,8 +133,6 @@ select:hover + i
 .button:active,
 button:active,
 [type="submit"]:active,
-[type="reset"]:active,
-[type="button"]:active,
 [type="checkbox"]:active + i,
 [type="radio"]:active + i,
 select:active + i
@@ -158,8 +147,6 @@ textarea
 .button:focus,
 button:focus,
 [type="submit"]:focus,
-[type="reset"]:focus,
-[type="button"]:focus,
 [type="checkbox"]:focus + i,
 [type="radio"]:focus + i,
 select:focus + i
@@ -170,8 +157,6 @@ select:focus + i
 .button:focus:active,
 button:focus:active,
 [type="submit"]:focus:active,
-[type="reset"]:focus:active,
-[type="button"]:focus:active,
 [type="checkbox"]:focus:active + i,
 [type="radio"]:focus:active + i,
 select:focus:active + i
@@ -183,8 +168,6 @@ select:focus:active + i
 .button.disabled,
 button:disabled,
 [type="submit"]:disabled,
-[type="reset"]:disabled,
-[type="button"]:disabled,
 [type="checkbox"]:disabled + i,
 [type="radio"]:disabled + i,
 select:disabled + i
@@ -305,11 +288,11 @@ select
   & + i:after
     border: solid
     border-color: darken(#fff, $lum * 60) transparent
-    border-width: 4px 4px 0
+    border-width: 5px 5px 0
     content: ""
     display: block
     position: absolute
-    bottom: 7px
-    right: 5px
+    bottom: 13px
+    right: 7px
   &:focus + i:after
     border-top-color: #000
