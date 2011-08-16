@@ -184,20 +184,21 @@ select:disabled + i
   position: absolute
   & + i
     display: inline-block
-    font-size: 7px
-    margin-right: 2px
+    font-size: 7px // why?
+    margin-right: 1px
     padding: 0
     position: relative
     vertical-align: -1px
+    +border-radius(3px)
     left: 1px
-    height: 12px
-    width: 12px
+    height: 14px
+    width: 14px
     &:after
       background: inline-image("check.png", image/png) no-repeat
       display: block
       position: absolute
-      top: -3px
-      left: 1px
+      top: -2px
+      left: 2px
       height: 11px
       width: 11px
 
@@ -213,11 +214,10 @@ select:disabled + i
   & + i
     +border-radius(12px)
     font-size: 8px
-    margin: 0
     vertical-align: -2px
-    left: 0
     height: 14px
     width: 14px
+    top: -1px
     &:after
       background: #000
       +border-radius(4px)
