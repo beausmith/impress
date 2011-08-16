@@ -18,9 +18,10 @@ Both [Stylus](http://learnboost.github.com/stylus/) and [Compass](http://compass
 1. [Install Compass](http://compass-style.org/install/) if necessary.
 2. Run `$ compass watch` from the Impress directory.
 
-### Author
+## Authors
 
-  [Nate Smith (nateps)](http://github.com/nateps)
+* [Nate Smith (nateps)](http://github.com/nateps)
+* [Beau Smith (beausmith)](http://github.com/beausmith)
 
 ## License 
 
